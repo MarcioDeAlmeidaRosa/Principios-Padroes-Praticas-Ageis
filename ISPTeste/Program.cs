@@ -18,8 +18,13 @@ namespace ISPTeste
         static void Main(string[] args)
         {
             Console.WriteLine("Iniciando testes");
+            Console.WriteLine("------------------------");
 
             _testaveis[0].Testar();
+
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Pressione OK para encerrar...");
+            Console.ReadKey();
         }
     }
 }
