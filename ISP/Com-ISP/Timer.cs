@@ -6,7 +6,7 @@ namespace Com_ISP
     {
         private ITimerClient _client;
 
-        public void Register(int timeout, ITimerClient client)
+        public void Register(int timeout/*, int timeoutId*/, ITimerClient client)
         {
             _client = client;
             Task.Factory.StartNew(() =>
