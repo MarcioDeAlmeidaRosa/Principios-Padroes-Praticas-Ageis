@@ -2,7 +2,7 @@
 
 namespace Sem_ISP
 {
-    class DefaultDoor : Door
+    public class DefaultDoor : Door
     {
         public DefaultDoor()
         {

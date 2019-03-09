@@ -43,11 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ITestavel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestandoComISP.cs" />
+    <Compile Include="TestandoSemISP.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Com-ISP\Com-ISP.csproj">
+      <Project>{55a3df6b-df77-41fb-b455-a1e0d3e01f9b}</Project>
+      <Name>Com-ISP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sem-ISP\Sem-ISP.csproj">
+      <Project>{8188351e-b7f8-43d2-a22d-3899f74e7d12}</Project>
+      <Name>Sem-ISP</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

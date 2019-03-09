@@ -2,7 +2,7 @@
 
 namespace Sem_ISP
 {
-    class Timer : ITimerClient
+    public class Timer : ITimerClient
     {
         private ITimerClient _client;
 

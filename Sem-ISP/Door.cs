@@ -2,14 +2,14 @@
 
 namespace Sem_ISP
 {
-    abstract class Door : IDoor
+    public abstract class Door : IDoor
     {
         #region IDoor
         private bool _isDoorOpen { get; set; }
 
         public Door()
         {
-            _isDoorOpen = true;
+            _isDoorOpen = false;
         }
 
         public virtual bool IsDoorOpen()

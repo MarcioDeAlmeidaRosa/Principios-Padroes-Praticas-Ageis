@@ -2,7 +2,7 @@
 
 namespace Sem_ISP
 {
-    class TimedDoor : Door
+    public class TimedDoor : Door
     {
         public TimedDoor()
         {

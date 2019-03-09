@@ -1,6 +1,6 @@
 ﻿namespace Sem_ISP
 {
-    internal interface ITimerClient
+    public interface ITimerClient
     {
         void TimeOut();
     }
