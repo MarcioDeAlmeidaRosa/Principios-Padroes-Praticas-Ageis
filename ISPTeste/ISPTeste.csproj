@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8188351E-B7F8-43D2-A22D-3899F74E7D12}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Sem_ISP</RootNamespace>
-    <AssemblyName>Sem-ISP</AssemblyName>
+    <ProjectGuid>{AFB31F86-101A-46FD-830D-DCF8E0EA9AB0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ISPTeste</RootNamespace>
+    <AssemblyName>ISPTeste</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,14 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefaultDoor.cs" />
-    <Compile Include="Door.cs" />
-    <Compile Include="IDoor.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TimeClient.cs" />
-    <Compile Include="TimedDoor.cs" />
-    <Compile Include="Timer.cs" />
-    <Compile Include="ITimerClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
