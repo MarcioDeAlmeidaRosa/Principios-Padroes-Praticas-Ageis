@@ -11,7 +11,7 @@ namespace ISPTeste
             _testaveis = new ITestavel[]
             {
                 new TestandoSemISP(),
-                new TestandoSemISP()
+                new TestandoComISP()
             };
         }
 
@@ -20,7 +20,7 @@ namespace ISPTeste
             Console.WriteLine("Iniciando testes");
             Console.WriteLine("------------------------");
 
-            _testaveis[0].Testar();
+            _testaveis[1].Testar();
 
             Console.WriteLine("------------------------");
             Console.WriteLine("Pressione OK para encerrar...");
