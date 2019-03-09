@@ -4,6 +4,8 @@ namespace Com_ISP
 {
     public class TimedDoor : Door
     {
+        private Timer _timer;
+
         public TimedDoor()
         {
             Console.WriteLine("------------------------");
@@ -14,7 +16,7 @@ namespace Com_ISP
         public override bool IsDoorOpen()
         {
             Console.WriteLine("------------------------");
-            Console.WriteLine("Executando IsDoorOpen() da classe base Door");
+            Console.WriteLine("Executando IsDoorOpen() da classe base TimedDoor");
             Console.WriteLine("------------------------");
             return _isDoorOpen;
         }
@@ -22,7 +24,7 @@ namespace Com_ISP
         public override void Lock()
         {
             Console.WriteLine("------------------------");
-            Console.WriteLine("Executando Lock() da classe base Door");
+            Console.WriteLine("Executando Lock() da classe base TimedDoor");
 
             if (!IsDoorOpen())
             {
@@ -38,7 +40,7 @@ namespace Com_ISP
         public override void Unlock()
         {
             Console.WriteLine("------------------------");
-            Console.WriteLine("Executando TimeOut() da classe base Door");
+            Console.WriteLine("Executando TimeOut() da classe base TimedDoor");
             if (IsDoorOpen())
             {
                 Console.WriteLine("Erro - Porta já esta aberta");

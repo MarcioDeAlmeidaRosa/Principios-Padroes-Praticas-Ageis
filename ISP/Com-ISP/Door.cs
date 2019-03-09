@@ -4,7 +4,6 @@ namespace Com_ISP
 {
     public abstract class Door : IDoor
     {
-        protected Timer _timer;
         protected bool _isDoorOpen { get; set; }
 
         public Door()
