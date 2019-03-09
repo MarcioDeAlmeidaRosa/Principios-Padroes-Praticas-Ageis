@@ -52,11 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DefaultDoor.cs" />
-    <Compile Include="Door.cs" />
     <Compile Include="IDoor.cs" />
+    <Compile Include="ITimedDoor.cs" />
     <Compile Include="ITimerClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TimedDoor.cs" />
+    <Compile Include="DoorTimerAdapter.cs" />
     <Compile Include="Timer.cs" />
   </ItemGroup>
   <ItemGroup>

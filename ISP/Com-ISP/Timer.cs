@@ -6,20 +6,20 @@ namespace Com_ISP
     {
         private ITimerClient _client;
 
-        public void Register(int timeout, ITimerClient client)
+        public void Register(int timeout, int timeoutId, ITimerClient client)
         {
             _client = client;
             Task.Factory.StartNew(() =>
             {
                 System.Threading.Thread.Sleep(timeout);
-                TimeOut();
+                Timeout(timeoutId);
             });
         }
 
         #region ITimerClient
-        public void TimeOut()
+        public void Timeout(int timeoutId)
         {
-            _client.TimeOut();
+            _client.Timeout(timeoutId);
         }
         #endregion ITimerClient
     }

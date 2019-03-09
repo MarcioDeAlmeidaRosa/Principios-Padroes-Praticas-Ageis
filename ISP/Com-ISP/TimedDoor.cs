@@ -2,18 +2,29 @@
 
 namespace Com_ISP
 {
-    public class TimedDoor : Door
+    public class TimedDoor : ITimedDoor
     {
-        private Timer _timer;
+        private bool _isDoorOpen;
 
         public TimedDoor()
         {
             Console.WriteLine("------------------------");
             Console.WriteLine("Criando instância de porta com temporizador");
             Console.WriteLine("------------------------");
+            _isDoorOpen = false;
         }
 
-        public override bool IsDoorOpen()
+        #region ITimedDoor
+        public void DoorTimeout(int timeoutId)
+        {
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Tempo limite atingigo com a porta aberta - solicitando fechamento de porta automático");
+            Lock();
+            Console.WriteLine("------------------------");
+        }
+
+        #region IDoor
+        public bool IsDoorOpen()
         {
             Console.WriteLine("------------------------");
             Console.WriteLine("Executando IsDoorOpen() da classe base TimedDoor");
@@ -21,7 +32,7 @@ namespace Com_ISP
             return _isDoorOpen;
         }
 
-        public override void Lock()
+        public void Lock()
         {
             Console.WriteLine("------------------------");
             Console.WriteLine("Executando Lock() da classe base TimedDoor");
@@ -37,7 +48,7 @@ namespace Com_ISP
             Console.WriteLine("------------------------");
         }
 
-        public override void Unlock()
+        public void Unlock()
         {
             Console.WriteLine("------------------------");
             Console.WriteLine("Executando TimeOut() da classe base TimedDoor");
@@ -48,19 +59,15 @@ namespace Com_ISP
             }
             Console.WriteLine("Abrindo a porta");
             _isDoorOpen = true;
-            Console.WriteLine("Registrando time");
-            _timer = new Timer();
-            _timer.Register(int.Parse(System.Configuration.ConfigurationManager.AppSettings["configuration-timeout-door-open"]), this);
+
+            //TODO: verificar se será preciso armazenar a variável
+            new DoorTimerAdapter(this);
+
             Console.WriteLine("Porta aberta com sucesso");
             Console.WriteLine("------------------------");
         }
+        #endregion
 
-        public override void TimeOut()
-        {
-            Console.WriteLine("------------------------");
-            Console.WriteLine("Tempo limite atingigo com a porta aberta - solicitando fechamento de porta automático");
-            Lock();
-            Console.WriteLine("------------------------");
-        }
+        #endregion ITimedDoor
     }
 }

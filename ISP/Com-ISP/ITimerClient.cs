@@ -2,6 +2,6 @@
 {
     public interface ITimerClient
     {
-        void TimeOut();
+        void Timeout(int timeoutId);
     }
 }

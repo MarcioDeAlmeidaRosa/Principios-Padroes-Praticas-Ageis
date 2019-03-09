@@ -1,6 +1,6 @@
 ﻿namespace Com_ISP
 {
-    public interface IDoor : ITimerClient
+    public interface IDoor
     {
         void Lock();
         void Unlock();
