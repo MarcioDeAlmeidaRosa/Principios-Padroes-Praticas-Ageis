@@ -14,7 +14,7 @@ namespace Com_ISP
             _isDoorOpen = false;
         }
 
-        public virtual bool IsDoorOpen()
+        public bool IsDoorOpen()
         {
             Console.WriteLine("------------------------");
             Console.WriteLine("Executando IsDoorOpen() da classe base Door");
@@ -22,7 +22,7 @@ namespace Com_ISP
             return _isDoorOpen;
         }
 
-        public virtual void Lock()
+        public void Lock()
         {
             Console.WriteLine("------------------------");
             Console.WriteLine("Executando Lock() da classe base Door");
@@ -38,7 +38,7 @@ namespace Com_ISP
             Console.WriteLine("------------------------");
         }
 
-        public virtual void Unlock()
+        public void Unlock()
         {
             Console.WriteLine("------------------------");
             Console.WriteLine("Executando TimeOut() da classe base Door");
@@ -58,7 +58,7 @@ namespace Com_ISP
         #endregion IDoor
 
         #region ITimerClient
-        public virtual void TimeOut()
+        public void TimeOut()
         {
             Console.WriteLine("------------------------");
             Console.WriteLine("Tempo limite atingigo com a porta aberta - solicitando fechamento de porta automático");
