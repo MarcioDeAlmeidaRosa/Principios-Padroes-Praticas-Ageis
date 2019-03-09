@@ -2,7 +2,7 @@
 
 namespace Sem_ISP
 {
-    abstract class Door : IDoor, ITimerClient
+    abstract class Door : IDoor
     {
         #region IDoor
         private bool _isDoorOpen { get; set; }

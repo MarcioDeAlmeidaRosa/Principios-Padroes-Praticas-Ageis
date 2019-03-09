@@ -1,6 +1,6 @@
 ﻿namespace Sem_ISP
 {
-    internal interface IDoor
+    internal interface IDoor : ITimerClient
     {
         void Lock();
         void Unlock();
