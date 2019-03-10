@@ -75,10 +75,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ATM-Com-ISP\ATM-Com-ISP.csproj">
-      <Project>{27494da4-7a3b-4316-9568-049c4047c7b0}</Project>
-      <Name>ATM-Com-ISP</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ISP\ATM-Sem-ISP\ATM-Sem-ISP.csproj">
       <Project>{ed5781a7-b0c8-4039-bf70-c3ff47d665a8}</Project>
       <Name>ATM-Sem-ISP</Name>
