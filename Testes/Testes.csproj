@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ATMTestandoComISP.cs" />
+    <Compile Include="ClientServidorTestandoComOCP.cs" />
     <Compile Include="ClientServidorTestandoSemOCP.cs" />
     <Compile Include="ATMTestandoSemISP.cs" />
     <Compile Include="ITestavel.cs" />
@@ -75,6 +76,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ISP\ATM-Com-ISP\ATM-Com-ISP.csproj">
+      <Project>{27494da4-7a3b-4316-9568-049c4047c7b0}</Project>
+      <Name>ATM-Com-ISP</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ISP\ATM-Sem-ISP\ATM-Sem-ISP.csproj">
       <Project>{ed5781a7-b0c8-4039-bf70-c3ff47d665a8}</Project>
       <Name>ATM-Sem-ISP</Name>
@@ -86,6 +91,10 @@
     <ProjectReference Include="..\ISP\Sem-ISP\Door-Sem-ISP.csproj">
       <Project>{8188351e-b7f8-43d2-a22d-3899f74e7d12}</Project>
       <Name>Door-Sem-ISP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OCP\ClienteServidor_Com_OCP\ClienteServidor_Com_OCP.csproj">
+      <Project>{cbf40dfa-d7f0-4828-b0f9-74d541968f1d}</Project>
+      <Name>ClienteServidor_Com_OCP</Name>
     </ProjectReference>
     <ProjectReference Include="..\OCP\ClienteServidor_Sem_OCP\ClienteServidor_Sem_OCP.csproj">
       <Project>{f32f8306-ff1d-40f2-a0c5-c90f67bbb0e4}</Project>
