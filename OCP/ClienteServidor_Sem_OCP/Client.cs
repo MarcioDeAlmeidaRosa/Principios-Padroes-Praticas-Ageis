@@ -16,7 +16,7 @@ namespace ClienteServidor_Sem_OCP
             server.Desligar();
         }
 
-        public void Trabalhar()
+        private void Trabalhar()
         {
             Console.WriteLine("Trabalhando durante o dia todo");
             Thread.Sleep(10000);

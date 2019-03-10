@@ -14,6 +14,7 @@ namespace ISPTeste
                 new DoorTestandoComISP(),
                 new ATMTestandoSemISP(),
                 new ATMTestandoComISP(),
+                new ClientServidorTestandoSemOCP(),
             };
         }
 
@@ -22,7 +23,7 @@ namespace ISPTeste
             Console.WriteLine("Iniciando testes");
             Console.WriteLine("------------------------");
 
-            _testaveis[3].Testar();
+            _testaveis[4].Testar();
 
             Console.WriteLine("------------------------");
             Console.WriteLine("Pressione OK para encerrar...");
