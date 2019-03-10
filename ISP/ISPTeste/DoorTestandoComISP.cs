@@ -1,16 +1,16 @@
-﻿using Sem_ISP;
+﻿using Com_ISP;
 using System;
 
 namespace ISPTeste
 {
-    class TestandoSemISP : ITestavel
+    class DoorTestandoComISP : ITestavel
     {
         public void Testar()
         {
             Console.WriteLine("------------------------");
-            Console.WriteLine("Iniciando testes (TestandoSemISP)");
+            Console.WriteLine("Iniciando testes (TestandoComISP)");
             Console.WriteLine("------------------------");
-            CriarPortaPadrao();
+            CriarPortaComTemporizador();
         }
 
         private void CriarPortaPadrao()
@@ -26,6 +26,21 @@ namespace ISPTeste
             Console.ReadKey();
 
             defaultDoor.Lock();
+        }
+
+        private void CriarPortaComTemporizador()
+        {
+            TimedDoor timedDoor = new TimedDoor();
+
+            timedDoor.IsDoorOpen();
+
+            timedDoor.Unlock();
+
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Pressione OK para fechar a porta...");
+            Console.ReadKey();
+
+            timedDoor.Lock();
         }
     }
 }

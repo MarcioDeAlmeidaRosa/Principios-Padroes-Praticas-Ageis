@@ -7,7 +7,7 @@
     <ProjectGuid>{8188351E-B7F8-43D2-A22D-3899F74E7D12}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Sem_ISP</RootNamespace>
-    <AssemblyName>Sem-ISP</AssemblyName>
+    <AssemblyName>Door-Sem-ISP</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -61,24 +61,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ATMTestandoSemISP.cs" />
     <Compile Include="ITestavel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestandoComISP.cs" />
-    <Compile Include="TestandoSemISP.cs" />
+    <Compile Include="DoorTestandoComISP.cs" />
+    <Compile Include="DoorTestandoSemISP.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Com-ISP\Com-ISP.csproj">
-      <Project>{55a3df6b-df77-41fb-b455-a1e0d3e01f9b}</Project>
-      <Name>Com-ISP</Name>
+    <ProjectReference Include="..\ATM-Sem-ISP\ATM-Sem-ISP.csproj">
+      <Project>{ed5781a7-b0c8-4039-bf70-c3ff47d665a8}</Project>
+      <Name>ATM-Sem-ISP</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Sem-ISP\Sem-ISP.csproj">
+    <ProjectReference Include="..\Com-ISP\Door-Com-ISP.csproj">
+      <Project>{55a3df6b-df77-41fb-b455-a1e0d3e01f9b}</Project>
+      <Name>Door-Com-ISP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sem-ISP\Door-Sem-ISP.csproj">
       <Project>{8188351e-b7f8-43d2-a22d-3899f74e7d12}</Project>
-      <Name>Sem-ISP</Name>
+      <Name>Door-Sem-ISP</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
