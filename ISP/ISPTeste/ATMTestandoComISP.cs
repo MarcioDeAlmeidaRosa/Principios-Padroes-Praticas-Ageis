@@ -1,9 +1,9 @@
-﻿using ATM_Sem_ISP;
+﻿using ATM_Com_ISP;
 using System;
 
 namespace ISPTeste
 {
-    public class ATMTestandoSemISP : ITestavel
+    public class ATMTestandoComISP : ITestavel
     {
         public void Testar()
         {
@@ -16,8 +16,7 @@ namespace ISPTeste
         {
             try
             {
-                IUI ui = new ATMUI(300);
-                ITransaction transacao = new TransferTransaction(ui);
+                ITransaction transacao = new TransferTransaction(new ATMUI(300));
                 transacao.Execute();
                 Console.WriteLine("Valor transferido com sucesso.");
             }
@@ -31,8 +30,7 @@ namespace ISPTeste
         {
             try
             {
-                IUI ui = new ATMUI(300);
-                ITransaction transacao = new WithdrawaTransaction(ui);
+                ITransaction transacao = new WithdrawaTransaction(new ATMUI(300));
                 transacao.Execute();
                 Console.WriteLine("Valor sacado com sucesso.");
             }
@@ -46,8 +44,7 @@ namespace ISPTeste
         {
             try
             {
-                IUI ui = new ATMUI(300);
-                ITransaction transacao = new DepositTransaction(ui);
+                ITransaction transacao = new DepositTransaction(new ATMUI(300));
                 transacao.Execute();
                 Console.WriteLine("Valor depositado com sucesso.");
             }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace ATM_Sem_ISP
+namespace ATM_Com_ISP
 {
-    public class UI : IUI
+    public class ATMUI : IUI
     {
         private decimal _saldo = 0;
 
-        public UI(decimal saldo)
+        public ATMUI(decimal saldo)
         {
             _saldo = saldo;
         }
@@ -19,6 +19,7 @@ namespace ATM_Sem_ISP
             }
         }
 
+        #region IDepositUI
         public decimal RequestDepositAmt()
         {
             Console.WriteLine("Informe o valor para depósito:");
@@ -31,7 +32,9 @@ namespace ATM_Sem_ISP
             _saldo += valorConvertido;
             return valorConvertido;
         }
+        #endregion IDepositUI
 
+        #region ITransferUI
         public decimal RequestTransferAmt()
         {
             Console.WriteLine("Informe o valor para tranferência:");
@@ -45,8 +48,10 @@ namespace ATM_Sem_ISP
             InformInsufficientFunds();
             return valorConvertido;
         }
+        #endregion ITransferUI
 
-        public decimal RequestWithdramalAmt()
+        #region IWithdrawaUI
+        public decimal RequestWithdrawalAmt()
         {
             Console.WriteLine("Informe o valor para saque:");
             var valor = Console.ReadLine();
@@ -59,5 +64,6 @@ namespace ATM_Sem_ISP
             InformInsufficientFunds();
             return valorConvertido;
         }
+        #endregion IWithdrawaUI
     }
 }

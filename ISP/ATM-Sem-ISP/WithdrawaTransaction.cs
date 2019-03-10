@@ -1,10 +1,10 @@
 ﻿namespace ATM_Sem_ISP
 {
-    public class WithdramaTransaction : ITransaction
+    public class WithdrawaTransaction : ITransaction
     {
         private readonly IUI _ui;
 
-        public WithdramaTransaction(IUI ui)
+        public WithdrawaTransaction(IUI ui)
         {
             _ui = ui;
         }
