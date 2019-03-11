@@ -9,8 +9,14 @@ namespace Geometria_Sem_SRP
         /// 1º Fornecer um modelo matemático da geometria de um retângulo
         /// 2º Representar o retêngulo em uma interface gráfica
         /// </summary>
-        protected double Base { get; set; }
-        protected double Altura { get; set; }
+        protected readonly double _base;
+        protected readonly double _altura;
+
+        public Retangle(double _base, double altura)
+        {
+            this._base = _base;
+            _altura = altura;
+        }
 
         public void Draw()
         {
@@ -20,7 +26,7 @@ namespace Geometria_Sem_SRP
         public double Area()
         {
             Console.WriteLine("Fornecer um modelo matemático da geometria de um retângulo");
-            return Base * Altura;
+            return _base * _altura;
         }
     }
 }

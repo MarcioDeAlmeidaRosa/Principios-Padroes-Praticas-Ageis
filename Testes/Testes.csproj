@@ -70,7 +70,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ISP\DoorTestandoComISP.cs" />
     <Compile Include="ISP\DoorTestandoSemISP.cs" />
+    <Compile Include="SRP\GeometriaTestandoComSRP.cs" />
     <Compile Include="SRP\ModemTestandoComSRP.cs" />
+    <Compile Include="SRP\GeometriaTestandoSemSRP.cs" />
     <Compile Include="SRP\ModemTestandoSemSRP.cs" />
   </ItemGroup>
   <ItemGroup>

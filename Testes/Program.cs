@@ -19,6 +19,8 @@ namespace ISPTeste
                 new ClientServidorTestandoComOCP(),//5
                 new ModemTestandoSemSRP(),//6
                 new ModemTestandoComSRP(),//7
+                new GeometriaTestandoSemSRP(),//8
+                new GeometriaTestandoComSRP(),//9
             };
         }
 
@@ -27,7 +29,7 @@ namespace ISPTeste
             Console.WriteLine("Iniciando testes");
             Console.WriteLine("------------------------");
 
-            _testaveis[7].Testar();
+            _testaveis[9].Testar();
 
             Console.WriteLine("------------------------");
             Console.WriteLine("Pressione OK para encerrar...");
