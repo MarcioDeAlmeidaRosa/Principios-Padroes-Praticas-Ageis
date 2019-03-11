@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ISPTeste.SRP;
+using System;
 
 namespace ISPTeste
 {
@@ -10,12 +11,14 @@ namespace ISPTeste
         {
             _testaveis = new ITestavel[]
             {
-                new DoorTestandoSemISP(),
-                new DoorTestandoComISP(),
-                new ATMTestandoSemISP(),
-                new ATMTestandoComISP(),
-                new ClientServidorTestandoSemOCP(),
-                new ClientServidorTestandoComOCP(),
+                new DoorTestandoSemISP(),//0
+                new DoorTestandoComISP(),//1
+                new ATMTestandoSemISP(),//2
+                new ATMTestandoComISP(),//3
+                new ClientServidorTestandoSemOCP(),//4
+                new ClientServidorTestandoComOCP(),//5
+                new ModemTestandoSemSRP(),//6
+                new ModemTestandoComSRP(),//7
             };
         }
 
@@ -24,7 +27,7 @@ namespace ISPTeste
             Console.WriteLine("Iniciando testes");
             Console.WriteLine("------------------------");
 
-            _testaveis[5].Testar();
+            _testaveis[7].Testar();
 
             Console.WriteLine("------------------------");
             Console.WriteLine("Pressione OK para encerrar...");

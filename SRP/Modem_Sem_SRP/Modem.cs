@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Geometria_Sem_SRP
+namespace Modem_Com_SRP
 {
     /// <summary>
     /// Note que mantivemos as duas responsabilidades acopladas na classe ainda.
@@ -32,7 +32,7 @@ namespace Geometria_Sem_SRP
 
         public void Send(char c)
         {
-            Console.WriteLine($"Enviando mensagem ${c}");
+            Console.WriteLine($"Enviando mensagem {c}");
         }
         #endregion IDataChannel
     }

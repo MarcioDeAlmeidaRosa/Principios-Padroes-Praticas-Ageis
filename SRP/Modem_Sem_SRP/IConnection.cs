@@ -1,4 +1,4 @@
-﻿namespace Geometria_Sem_SRP
+﻿namespace Modem_Com_SRP
 {
     public interface IConnection
     {

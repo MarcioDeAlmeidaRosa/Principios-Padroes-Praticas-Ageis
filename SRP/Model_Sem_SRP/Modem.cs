@@ -28,7 +28,7 @@ namespace Model_Sem_SRP
 
         public void Send(char c)
         {
-            Console.WriteLine($"Enviando mensagem ${c}");
+            Console.WriteLine($"Enviando mensagem {c}");
         }
     }
 }
